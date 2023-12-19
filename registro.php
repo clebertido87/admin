@@ -18,6 +18,11 @@
                 </div>
                 <div class="card-body">
                   <form role="form" action="processar_registro.php" method="POST" onsubmit="return validateForm()">
+                    <!-- Adiciona um campo de usuário no formulário -->
+                    <label>Usuário</label>
+                    <div class="mb-3">
+                      <input type="text" name="usuario" id="usuario" class="form-control" placeholder="Usuário" aria-label="Usuário" aria-describedby="usuario-addon" required>
+                    </div>
                     <label>Email</label>
                     <div class="mb-3">
                       <input type="email" name="email" id="email" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="email-addon" required>
@@ -37,6 +42,7 @@
           </div>
         </div>
       </div>
+
       <div id="email-error" style="color: red;">
         <?php
         if (isset($_SESSION['cadastroErro'])) {
